@@ -18,6 +18,11 @@ Distributed Denial of Service attacks are illegal, you could go to jail for this
 3. Download my project and import it in Netbeans (File -> Open project)
 4. Code and have fun
 
+P.S. you can download:
+Java - https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html. Install it:)
+The windows version https://github.com/ahromov/DDoSWar/blob/master/ddoswar.zip. Just run it ;)
+
+
 
 ## Usage
 
