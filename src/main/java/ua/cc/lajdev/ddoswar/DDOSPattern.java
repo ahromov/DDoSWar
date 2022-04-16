@@ -25,6 +25,8 @@
  */
 package ua.cc.lajdev.ddoswar;
 
+import lombok.ToString;
+
 import java.io.Serializable;
 
 /**
@@ -36,6 +38,7 @@ import java.io.Serializable;
  * 
  * Last changed: 13.05.2015
  */
+@ToString
 public class DDOSPattern implements Serializable {
     
     /**

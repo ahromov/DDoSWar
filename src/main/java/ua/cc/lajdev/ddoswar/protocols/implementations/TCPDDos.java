@@ -29,7 +29,7 @@ public class TCPDDos extends TCP {
             bw.write(getDdosPattern().getMessage());
             bw.flush();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            ex.getCause();
         }
     }
 }

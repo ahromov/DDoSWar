@@ -44,7 +44,7 @@ public abstract class UDP extends DDOS {
             try {
                 Thread.sleep(getDdosPattern().getTimeout());
             } catch (InterruptedException ex) {
-                ex.printStackTrace();
+                ex.getCause();
             }
         }
         closeSocket();
@@ -59,7 +59,7 @@ public abstract class UDP extends DDOS {
             socket.setSoTimeout(getDdosPattern().getSocketTimeout());
         } catch (SocketException ex) {
             DDOSer.appendToConsole("Error while creating or accessing a Socket!");
-            ex.printStackTrace();
+            ex.getCause();
         }
     }
 

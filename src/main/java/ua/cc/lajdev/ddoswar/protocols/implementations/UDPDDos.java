@@ -31,7 +31,7 @@ public class UDPDDos extends UDP {
             getSocket().send(getPacket());
         } catch (IOException ex) {
             DDOSer.appendToConsole("Error while connecting a Socket!");
-            ex.printStackTrace();
+            ex.getCause();
         }
     }
 }

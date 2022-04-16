@@ -1,0 +1,22 @@
+<assembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 ">
+    <id>zip</id>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <files>
+        <file>
+            <source>${project.build.directory}/ddoswar.jar</source>
+            <outputDirectory>.</outputDirectory>
+        </file>
+        <file>
+            <source>conf/ddos.properties</source>
+            <outputDirectory>./conf</outputDirectory>
+        </file>
+        <file>
+            <source>conf/task.txt</source>
+            <outputDirectory>./conf</outputDirectory>
+        </file>
+    </files>
+</assembly>

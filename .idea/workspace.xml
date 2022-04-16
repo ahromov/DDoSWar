@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="917aaac1-fb84-4117-801d-af3a77208b60" name="Changes" comment="UPD .gitignore" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="Reworked on console version" />
+        <option name="rewordedMessage" value="&#10;&#10;Reworked on console version" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="7360aa4575116b6582ac6c9b6c40166529a9a60f" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27mm1zewAWlU5bYQjNSQ5z3bqIh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrii\IdeaProjects\DDoSWar" />
+      <recent name="C:\Users\Andrii\IdeaProjects\DDoSWar\src\main\java" />
+      <recent name="C:\Users\Andrii\IdeaProjects\DDoSWar\src\main\java\protocols" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrii\IdeaProjects\DDoSWar\conf" />
+      <recent name="C:\Users\Andrii\IdeaProjects\DDoSWar" />
+      <recent name="C:\Users\Andrii\IdeaProjects\DDoSWar\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ua.cc.lajdev.ddoswar" />
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ua.cc.lajdev.ddoswar.utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DDOSer">
+    <configuration name="DDOSer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ua.cc.lajdev.ddoswar.DDOSer" />
+      <module name="ddoswar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DDoSWar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.test_parser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DDoSWar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="test_parser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DDOSer" />
+      <item itemvalue="TestNG.MainTest.test" />
+      <item itemvalue="TestNG.MainTest.test_parser" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DDOSer" />
+        <item itemvalue="TestNG.MainTest.test" />
+        <item itemvalue="TestNG.MainTest.test_parser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="917aaac1-fb84-4117-801d-af3a77208b60" name="Changes" comment="UPD .gitignore" />
+      <created>1649933425789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649933425789</updated>
+      <workItem from="1649933426944" duration="3195000" />
+      <workItem from="1649939634114" duration="191000" />
+      <workItem from="1649939830681" duration="14000" />
+      <workItem from="1649939849364" duration="36000" />
+      <workItem from="1649939890135" duration="704000" />
+      <workItem from="1649941665989" duration="522000" />
+      <workItem from="1650037983906" duration="63000" />
+      <workItem from="1650094923307" duration="9912000" />
+      <workItem from="1650108022363" duration="859000" />
+      <workItem from="1650117604606" duration="68000" />
+      <workItem from="1650118831661" duration="4608000" />
+      <workItem from="1650126604639" duration="3023000" />
+      <workItem from="1650130110652" duration="258000" />
+      <workItem from="1650130833431" duration="125000" />
+    </task>
+    <task id="LOCAL-00001" summary="upd">
+      <created>1649939576178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649939576178</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1649940076629</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649940076629</updated>
+    </task>
+    <task id="LOCAL-00003" summary="UPD README.md">
+      <created>1649941850196</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649941850196</updated>
+    </task>
+    <task id="LOCAL-00004" summary="UPD README.md">
+      <created>1649941913152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649941913152</updated>
+    </task>
+    <task id="LOCAL-00005" summary="UPD README.md">
+      <created>1649942152040</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649942152040</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Reworked on console version">
+      <created>1650107137969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650107137969</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reworked on console version">
+      <created>1650107440218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650107440218</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reworked on console version">
+      <created>1650107804899</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650107804899</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Reworked on console version">
+      <created>1650108336401</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650108336401</updated>
+    </task>
+    <task id="LOCAL-00010" summary="UPD .gitignore">
+      <created>1650122157278</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650122157278</updated>
+    </task>
+    <task id="LOCAL-00011" summary="UPD .gitignore">
+      <created>1650128968049</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650128968049</updated>
+    </task>
+    <task id="LOCAL-00012" summary="UPD .gitignore">
+      <created>1650129746379</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650129746379</updated>
+    </task>
+    <task id="LOCAL-00013" summary="UPD .gitignore">
+      <created>1650130346405</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1650130346405</updated>
+    </task>
+    <task id="LOCAL-00014" summary="UPD .gitignore">
+      <created>1650130910706</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1650130910706</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="upd" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="UPD README.md" />
+    <MESSAGE value="Reworked on console version" />
+    <MESSAGE value="UPD .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPD .gitignore" />
+  </component>
+</project>
