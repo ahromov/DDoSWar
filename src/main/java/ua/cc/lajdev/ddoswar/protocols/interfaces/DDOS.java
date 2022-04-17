@@ -1,6 +1,7 @@
 package ua.cc.lajdev.ddoswar.protocols.interfaces;
 
 import ua.cc.lajdev.ddoswar.DDOSPattern;
+import ua.cc.lajdev.ddoswar.DDOSer;
 
 import java.net.SocketAddress;
 
@@ -15,13 +16,15 @@ import java.net.SocketAddress;
 public abstract class DDOS implements Runnable {
     private DDOSPattern ddosPattern;
     private SocketAddress address;
+    protected DDOSer ddoSer;
 
     public DDOS() {
 
     }
 
-    public DDOS(DDOSPattern ddosPattern) {
+    public DDOS(DDOSPattern ddosPattern, DDOSer ddoSer) {
         this.ddosPattern = ddosPattern;
+        this.ddoSer = ddoSer;
     }
 
     /**

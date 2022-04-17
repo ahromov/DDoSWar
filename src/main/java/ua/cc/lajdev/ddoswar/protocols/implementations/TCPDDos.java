@@ -1,6 +1,7 @@
 package ua.cc.lajdev.ddoswar.protocols.implementations;
 
 import ua.cc.lajdev.ddoswar.DDOSPattern;
+import ua.cc.lajdev.ddoswar.DDOSer;
 import ua.cc.lajdev.ddoswar.protocols.interfaces.TCP;
 
 import java.io.BufferedWriter;
@@ -19,8 +20,8 @@ public class TCPDDos extends TCP {
      *
      * @param ddosPattern
      */
-    public TCPDDos(DDOSPattern ddosPattern) {
-        super(ddosPattern);
+    public TCPDDos(DDOSPattern ddosPattern, DDOSer ddoSer) {
+        super(ddosPattern,ddoSer);
     }
 
     @Override
@@ -29,7 +30,7 @@ public class TCPDDos extends TCP {
             bw.write(getDdosPattern().getMessage());
             bw.flush();
         } catch (IOException ex) {
-            ex.getCause();
+            System.out.println(ex.getMessage());
         }
     }
 }

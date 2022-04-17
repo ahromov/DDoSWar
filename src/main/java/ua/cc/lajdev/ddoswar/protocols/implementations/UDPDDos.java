@@ -18,8 +18,8 @@ public class UDPDDos extends UDP {
      *
      * @param ddosPattern
      */
-    public UDPDDos(DDOSPattern ddosPattern) {
-        super(ddosPattern);
+    public UDPDDos(DDOSPattern ddosPattern, DDOSer ddoSer) {
+        super(ddosPattern, ddoSer);
     }
 
     @Override

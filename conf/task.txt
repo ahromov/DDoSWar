@@ -1,70 +1,8 @@
-https://more.tv/
-https://osiris.preprod.more.tv/
-https://rendertron.preprod.more.tv
-https://gitlab-exporter.preprod.more.tv
-https://dagon.preprod.more.tv
-94.140.201.116 (80/tcp, 123/udp, 443/tcp, 443/https)
-https://static.more.tv/
-94.140.200.247 (80/tcp, 111/udp, 123/udp, 443/tcp)
-94.140.201.247 (80/tcp, 443/tcp)
-94.140.201.50 (80/tcp, 443/tcp)
-https://moretv-sport.preprod.more.tv/
-https://billing-api-test.preprod.more.tv/
-94.140.201.116 (80/http, 443/https)
-https://rc.more.tv/home
-https://rc.more.tv/api/v1/method.callAnon/login
-94.140.201.135 (80/tcp, 123/udp, 443/tcp)
-https://okko.tv
-185.169.155.118 (80/tcp, 443/tcp)
-https://cabinet.okko.tv/login
-151.236.80.51 (443/https, 443/tcp)
-https://www.promo.okko.tv
-https://www.agent.okko.tv/
-185.129.100.112 (443/tcp, 80/tcp)
-https://agents.okko.tv
-https://premiere.okko.tv/
-https://show.okko.tv
-178.18.218.26 (80/tcp, 443/tcp)
-https://mimimi.okko.team/
-151.236.80.50 (443/https, 443/tcp)
-https://pobeda.okko.tv
-185.169.155.116 (443/https, 443/tcp)
-
-https://www.ontvtime.ru
-91.242.33.252 (80/tcp, 443/tcp)
-
-https://www.amediateka.ru
-212.193.156.175 (80/tcp, 443/tcp)
-212.193.146.216 (80/tcp, 443/tcp)
-62.76.27.135 (80/tcp, 443/tcp, 443/https)
-https://rt.amediateka.ru/
-https://akado.amediateka.ru/
-5.200.52.193 (80/tcp, 1433/tcp, 3389/tcp, 5985/tcp)
-https://major.amediateka.ru/
-62.76.27.135 (80/tcp, 443/tcp, 443/https)
-
-https://wink.ru
-https://www.wink.ru
-212.193.153.140 (443/tcp, 80/tcp, 443/https)
-212.193.155.253 (80/tcp, 443/tcp, 443/https)
-212.193.153.139 (80/tcp, 443/tcp, 443/https)
-212.193.153.141 (80/tcp, 443/tcp, 443/https)
-93.93.89.150 (80/tcp, 443/tcp, 443/https)
-87.226.155.212 (80/tcp, 443/tcp, 9001/http, 443/https)
-
-https://www.tvigle.ru/
-79.142.100.87 (8088/http, 8099/http, 8123/http)
-79.142.100.80 (8088/http, 8099/http, 8123/http)
-79.142.100.84 (8088/http, 8099/http, 8123/http)
-79.142.100.85 (8088/http, 8099/http, 8123/http)
-79.142.100.82 (8088/http, 8099/http, 8123/http)
-https://vendor.tvigle.ru/login
-79.142.100.44 (8088/http, 8099/http, 8123/http)
-https://cloud.tvigle.ru/
-79.142.100.86 (8088/http, 8099/http, 8123/http)
-https://gr.tvigle.ru/
-79.142.100.40 (80/http)
-https://admin.tvigle.ru/
-79.142.100.40 (80/http, 443/https)
-https://downloader.tvigle.ru/
-79.142.100.44 (80/http, 443/https)
+https://mercury.vetrf.ru/
+62.76.145.81 (80/tcp, 443/tcp)
+https://api.vetrf.ru/
+62.76.145.80 (80/tcp, 443/tcp)
+https://api2.vetrf.ru/
+62.76.145.85 (80/tcp, 443/tcp)
+https://idp.vetrf.ru/idp/profi
+62.76.145.83 (80/tcp, 443/tcp)

@@ -18,13 +18,13 @@ public class DdosFactory {
      * @param ddosPattern
      * @return a subclass of DDOS
      */
-    public static DDOS createDDOS(DDOSPattern ddosPattern) {
+    public static DDOS createDDOS(DDOSPattern ddosPattern, DDOSer ddoSer) {
         switch (ddosPattern.getProtocol().toLowerCase()) {
             case "tcp":
-                return new TCPDDos(ddosPattern);
+                return new TCPDDos(ddosPattern, ddoSer);
             case "udp":
-                return new UDPDDos(ddosPattern);
+                return new UDPDDos(ddosPattern, ddoSer);
         }
-        return new TCPDDos(ddosPattern);
+        return new TCPDDos(ddosPattern, ddoSer);
     }
 }

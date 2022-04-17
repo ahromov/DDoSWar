@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="917aaac1-fb84-4117-801d-af3a77208b60" name="Changes" comment="UPD .gitignore" />
+    <list default="true" id="917aaac1-fb84-4117-801d-af3a77208b60" name="Changes" comment="UPD rewokre with Project Loom">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,12 +31,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Reworked on console version" />
-        <option name="rewordedMessage" value="&#10;&#10;Reworked on console version" />
+        <option name="originalMessage" value="UPD rewoked with Project Loom" />
+        <option name="rewordedMessage" value="UPD rewokre with Project Loom" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="7360aa4575116b6582ac6c9b6c40166529a9a60f" />
+    <option name="onto" value="90df929c4e4d8af087400bef0977b352c56359c5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,10 +54,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -150,6 +153,9 @@
       <workItem from="1650126604639" duration="3023000" />
       <workItem from="1650130110652" duration="258000" />
       <workItem from="1650130833431" duration="125000" />
+      <workItem from="1650186940340" duration="12000" />
+      <workItem from="1650196428072" duration="1312000" />
+      <workItem from="1650197834314" duration="1012000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1649939576178</created>
@@ -249,7 +255,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650130910706</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="UPD rewokre with Project Loom">
+      <created>1650197556172</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1650197556172</updated>
+    </task>
+    <task id="LOCAL-00016" summary="UPD rewokre with Project Loom">
+      <created>1650198309355</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1650198309355</updated>
+    </task>
+    <task id="LOCAL-00017" summary="UPD rewokre with Project Loom">
+      <created>1650198348074</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1650198348074</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +293,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="dev_project_loom" />
                       </list>
                     </value>
                   </entry>
@@ -277,7 +304,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -288,6 +314,9 @@
     <MESSAGE value="UPD README.md" />
     <MESSAGE value="Reworked on console version" />
     <MESSAGE value="UPD .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPD .gitignore" />
+    <MESSAGE value="UPD rewokr with Project Loom" />
+    <MESSAGE value="UPD rewoked with Project Loom" />
+    <MESSAGE value="UPD rewokre with Project Loom" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPD rewokre with Project Loom" />
   </component>
 </project>

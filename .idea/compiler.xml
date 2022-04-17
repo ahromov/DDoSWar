@@ -11,9 +11,8 @@
         <module name="ddoswar" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="DDoSWar" target="11" />
-      <module name="ddoswar" target="11" />
+    <bytecodeTargetLevel target="19">
+      <module name="DDoSWar" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>
